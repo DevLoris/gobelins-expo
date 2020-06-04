@@ -5,6 +5,9 @@
       <Scene />
     </client-only>
     -->
+
+    <!--
+
     <h1 class="homepage__title">{{ $prismic.asText(title) }}</h1>
     <p class="homepage__desc">{{ $prismic.asText(description) }}</p>
 
@@ -21,6 +24,8 @@
         </div>
       </n-link>
     </div>
+    -->
+
 
     <!-- Banner component -->
     <!--    <homepage-banner :banner="banner"/>-->
