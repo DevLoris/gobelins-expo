@@ -1,7 +1,9 @@
 <template>
   <div class="homepage">
     <CustomHeader />
-    <CardStack :x="200" :y="200" class="card-stack"/>
+    <CardStack :x="200" :y="200" link="/test" class="card-stack" />
+    <CardStack :x="400" :y="400" link="/truc" class="card-stack" />
+    <div class="container"></div>
     <nuxt />
     <Footer />
   </div>
@@ -40,4 +42,8 @@ export default {
     position: absolute;
   }
 
+  .container {
+    width: 50%;
+    height: 95vh;
+  }
 </style>
