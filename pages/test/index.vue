@@ -1,7 +1,4 @@
 <template>
-  <div class="container">
-
-  </div>
 </template>
 
 <script>
@@ -11,28 +8,30 @@
     layout: 'homepage',
     mounted() {
       this.$nextTick(() => {
-        //this.moveStack();
+        this.moveStack();
       });
     },
     methods: {
       moveStack() {
-        const container = document.getElementsByClassName('container')[0];
         const stack = document.getElementsByClassName('card-stack')[0];
+        stack.style.width = '50%';
+        stack.style.height = '95vh';
+        //stack.style.transform = 'translate(0px, 0px)';
+
+        /*
+
+        const container = document.getElementsByClassName('container')[0];
         const midPt = {x: container.offsetWidth / 2, y: container.offsetHeight / 2};
         //console.log(stack., stack.);
         gsap.to(stack, {
-          left: `${midPt.x - 100}px`,
-          top: `${midPt.y - 100}px`,
-        })
+          x: `${midPt.x - 100}px`,
+          y: `${midPt.y - 100}px`,
+        })*/
       }
     }
   }
 </script>
 
 <style scoped>
-.container {
-  width: 50%;
-  height: 95vh;
-  border: solid 1px red;
-}
+
 </style>
