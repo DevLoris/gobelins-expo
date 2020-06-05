@@ -1,6 +1,9 @@
 <template>
-  <div class="home-page">
+  <div class="home-page homepage">
     <CustomHeader />
+    <CardStack :x="200" :y="200" link="/test" class="card-stack" />
+    <CardStack :x="400" :y="400" link="/truc" class="card-stack" />
+    <div class="container"></div>
     <nuxt />
     <Footer />
   </div>
@@ -9,11 +12,13 @@
 <script>
 import CustomHeader from '~/components/Header.vue'
 import Footer from '~/components/Footer.vue'
+import CardStack from "../components/CardStack";
 
 export default {
   components: {
     CustomHeader,
-    Footer
+    Footer,
+    CardStack,
   },
   head () {
     return {
@@ -28,9 +33,19 @@ export default {
 </script>
 
 <style>
-  .home-page {
+  .homepage {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background: blue;
+  }
+
+  .card-stack{
+    position: absolute;
+  }
+
+  .container {
+    width: 50%;
+    height: 95vh;
   }
 </style>
